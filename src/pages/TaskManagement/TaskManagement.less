@@ -1,0 +1,219 @@
+.taskManagement {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .breadDiv {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    flex: 0 0 auto;
+
+    .border {
+      width: 9.9px;
+      height: 9.9px;
+      border-left: 1px solid #6D7383;
+      border-bottom: 1px solid #6D7383;
+      border-radius: 0.5px;
+      transform: rotate(45deg);
+    }
+
+    .borderTitle {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      margin: 0 16px 0 6px;
+    }
+
+    .myBread {
+      align-self: flex-end;
+    }
+  }
+
+  .taskContent {
+    flex: 1 1 auto;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0px -8px 16px rgba(22, 59, 102, 0.08);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+    .myStep {
+      padding: 40px;
+      flex: 0 0 auto;
+
+      .ant-steps-item-wait .ant-steps-item-icon {
+        background-color: #EEF4FB;
+        border-color: #DBDEEA;
+
+        &>.ant-steps-icon {
+          color: #A3A9B7;
+          font-family: 'PingFang SC';
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+
+      .ant-steps-item-title::after {
+        height: 2px;
+        background: #DBDEEA;
+      }
+
+      .ant-steps-item-finish>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after {
+        background-color: #276BB9;
+      }
+
+      .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-icon {
+        background: #276BB9;
+        border-color: #276BB9;
+
+        .ant-steps-icon {
+          font-family: 'PingFang SC';
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+
+      .ant-steps-item-finish .ant-steps-item-icon {
+        border-color: #276BB9;
+
+        &>.ant-steps-icon {
+          color: #276BB9;
+        }
+      }
+    }
+
+    .content {
+      flex: 1 1 auto;
+      // height: calc(~'100% - 104px');
+      overflow-y: auto;
+      padding: 0 32px 0 40px;
+      margin-right: 4px;
+      margin-top: -12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .imgItemAfter {
+        width: 272px;
+        height: 0;
+      }
+
+      .imgItem {
+        width: 272px;
+        height: 300px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 16px rgba(22, 59, 102, 0.16);
+        border-radius: 4px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        position: relative;
+        cursor: pointer;
+
+        .imgDiv {
+          padding: 8px;
+          width: 100%;
+          height: 272px;
+          position: relative;
+
+          .imgs {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+          }
+
+          .imgNum {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            // color: #FFF;
+            font-size: 12px;
+            line-height: 17px;
+          }
+        }
+
+        .imgName {
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .imgCheck {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+
+          .ant-checkbox {
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .content::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .content::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #DBDEEA;
+    }
+
+    // .content::-webkit-scrollbar-track { // 滚动条背景
+    //   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    //   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    //   border-radius: 0;
+    //   background: rgba(0, 0, 0, 0.1);
+    // }
+
+    .taskFoot {
+      flex: 0 0 80px;
+      box-shadow: 0px -8px 16px rgba(22, 59, 102, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .selectAll {
+        margin-left: 36px;
+
+        .selectText {
+          margin: 0 8px;
+          line-height: 20px;
+        }
+
+        .sclectSub {
+          font-size: 12px;
+          line-height: 17px;
+          color: #6D7383;
+        }
+      }
+
+      .leftBtn {
+        width: 144px;
+        margin-right: 16px;
+        border-radius: 4px;
+      }
+
+      .rightBtn {
+        width: 144px;
+        margin-right: 24px;
+        border-radius: 4px;
+        border-color: #276BB9;
+        background-color: #276BB9;
+        color: #fff;
+      }
+    }
+  }
+}

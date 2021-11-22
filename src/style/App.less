@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  //不显示外部滚动条
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+
+  >.ant-layout {
+    height: 100%;
+  }
+}
+
+.myHeader {
+  background-color: #163b66;
+  line-height: initial;
+  height: 80px;
+  padding: 0 36px;
+
+  .toggle {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 288px;
+    color: #fff;
+
+    .topMenuTitle {
+      display: inline-flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .title {
+        font-family: "PangMenZhengDao";
+        font-size: 16px;
+        line-height: 18px;
+        // letter-spacing: 6px; // 字间距
+        width: 132px;
+        text-align: justify;
+        text-align-last: justify;
+      }
+    }
+
+    .togleIcon {
+      font-size: 16px;
+    }
+  }
+}
+
+.mySider {
+  box-shadow: 0px 0px 16px rgba(22, 59, 102, 0.08);
+
+  .addSider {
+    margin: 12px auto;
+    display: block;
+    width: 80%;
+    padding: 4px 0;
+  }
+
+  .siderMenu {
+    margin-top: 24px;
+
+    &:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background-color: rgba(39, 107, 185, 0.05);
+    }
+
+    .ant-menu-item {
+      height: 56px;
+      line-height: 56px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .ant-menu-item::after {
+      border-right: none;
+      border-left: 3px solid #276bb9;
+      left: 0;
+      right: initial;
+    }
+  }
+}
+
+.myContent {
+  padding: 24px 36px 24px 24px;
+  background-color: #eef4fb;
+}
